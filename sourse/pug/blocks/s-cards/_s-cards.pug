@@ -1,0 +1,18 @@
+mixin s-cards()
+	// start s-cards
+	+b.s-cards#s-cards&attributes(attributes)
+		+e.inner
+			.container 
+				+e.slider--js.swiper-container
+					.swiper-wrapper
+						mixin item(t, p)
+							+e.slide.swiper-slide.col-lg-4.col-sm-6
+								+e.item
+									+e.title= t
+									+e.text= p
+							// /+e.col.col
+						+item('1 час','Минимальное время прибытия')
+						+item('100%','Безопасность установленных систем')
+						+item('2 года','Гарантия на установленные системы')
+		.swiper-pagination
+	// end s-cards

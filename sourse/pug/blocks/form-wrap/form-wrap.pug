@@ -1,0 +1,27 @@
+mixin form-head()
+	form.js-form-validate( method="post" action="action.php" data-parsley-validate="") 
+		input(type='hidden', class="order", name='Вид формы', value=`Заявка  с сайта` ) 
+		block
+mixin input( t , n, pl)
+	+e.input-wrap.form-group
+		+e.INPUT.input.form-control(type= t name= n  placeholder= pl)&attributes(attributes)
+	// +e.input-wrap
+mixin ta(p , n, pl)
+	+e.input-wrap.form-group
+		label
+			+e.SPAN.title= p
+			+e.TEXTAREA.input.form-control(name= n placeholder= pl)&attributes(attributes)
+	// +e.input-wrap
+mixin in-ch()
+	+b.LABEL.custom-input
+		+e.INPUT.input(type="checkbox" name= n)&attributes(attributes)
+		+e.SPAN.lab
+		block 
+mixin form-wrap()
+	+b.form-wrap&attributes(attributes)
+		form
+			input(type="hidden" name="order" class="order")
+			block
+			+e.polite  
+				+in-ch()(checked)
+					+e.SPAN.text Отправляя заявку, я&nbsp;даю согласие на&nbsp;обработку и&nbsp;хранение моих персональных данных в&nbsp;соответствии с&nbsp;условиями

@@ -1,0 +1,53 @@
+mixin s-servises()
+	// start s-servises
+	+b.s-servises.section#s-servises&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Какие работы мы проводим
+				+e.text.text-primary Выберите интересующее направление
+			+b.tabs
+				+e.caption
+					+e.btn.active
+						+icon('fire')
+						| Пожарная безопасность
+					
+					+e.btn
+						+icon('water')
+						| Водоснабжение
+
+					+e.btn
+						+icon('fan')
+						| Вентиляция
+					+e.btn
+						+icon('plug-silhouette')
+						| Электросети
+					
+					+e.btn
+						+icon('usb-symbol')
+						| Слаботочные системы
+
+			
+				+e.wrap
+					mixin tab-slide(i, t)
+						+e.slide.swiper-slide.bgs(style=`background-image: url(img/tab-img-${i}.jpg);`)
+							+e.item
+								+e.title= t
+								+e.btn-modal.popup-with-move-anim(href="#modal-call" data-order=`Оставить заявку на - ${t}` data-title="Оставить заявку" data-sub-title="Заполните форму, и мы свяжемся с Вами в течение 15 минут для уточнения деталей" data-btn="Оставить заявку") Оставить заявку
+
+						// /+e.slide.swiper-slide
+					mixin cont()
+						+e.content&attributes(attributes)
+							+e.slider--js.swiper-container
+								.swiper-wrapper
+									
+									+tab-slide('1','Пожарная безопасность')
+									+tab-slide('2','Охранопожарная сигнализация')
+									+tab-slide('3','Оповещение людей о пожаре')
+									+tab-slide('4','Пожаротушение')
+								.swiper-pagination
+					+cont()(class="active")
+					+cont() 
+					+cont() 
+					+cont() 
+					+cont() 
+	// end s-servises

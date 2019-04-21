@@ -1,0 +1,53 @@
+mixin s-advantages()
+	// start s-advantages
+	+b.s-advantages.section#s-advantages&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Сотрудничая с нами Вы получаете:
+				
+			.row
+				mixin item(i)
+					+e.col.col-lg-4.col-sm-6
+						+e.img-wrap
+							img.res-i(src=`img/advantages-${i}.png`, alt="")
+						block
+					// /+e.col.col-lg-4.col-sm-6
+				+item('1')
+					+e.text 
+						strong Гарантия прохождения
+						br
+						| проверки МЧС
+				+item('2')
+					+e.text Только  
+						| 
+						strong сертифицированное 
+						| 
+						br
+						| оборудование и&nbsp;продукция
+				+item('3')
+					+e.text Пуско-наладочные работы
+						br 
+						| 
+						strong в&nbsp;подарок
+				+item('4')
+					+e.text 
+						strong Всегда в&nbsp;срок
+						|&nbsp;&mdash; оплата
+						br
+						| за&nbsp;каждый день просрочки
+				+item('5')
+					+e.text Никаких доп. соглашений и&nbsp;доп.
+						br
+						| смет если не&nbsp;меняется объем &mdash;
+						br
+						|
+						strong  цена остается прежней
+				+item('6')
+					+e.text Выполняем 
+						strong  любые
+							br
+							| объемы  
+							| 
+						| работ
+			+e.btn.popup-with-move-anim(href="#modal-call" data-order=` ` data-title="Оставить заявку" data-sub-title="Заполните форму, и мы свяжемся с Вами в течение 15 минут для уточнения деталей" data-btn="Оставить заявку") Оставить заявку
+	// end s-advantages

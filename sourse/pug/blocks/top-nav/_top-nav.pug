@@ -1,0 +1,37 @@
+include ../mixin-wrap/mixin-wrap.pug
+
+
+																		 
+mixin mob-mnu()
+	.toggle-mnu.toggle-mnu-1.d-xl-none
+		span
+	+b.trop.main-mnu.hidden-mnu.hidden-xl.landingMenu2.d-xl-none
+		.toggle-mnu.toggle-mnu-1
+			span
+		.wrapp-hidden 
+		
+			+mnu()
+			.text-right
+	//  мобильное меню
+mixin top-nav() 
+	// start top-nav
+	+b.top-nav--js
+		.container
+			.row
+				+e.col-logo.col-xl-auto.col-sm
+					+e.A.logo(href="/")
+						img.res-i.img-logo-top(src="img/logo.png", alt="")
+						img.res-i.img-logo-fixed(src="img/logo-color.png", alt="")
+				.col.d-none.d-xl-block
+					+mnu()
+				.col-sm-auto.text-sm-right 
+					+e.tel(href="tel:8(800)350-48-59") 8 (800) 350-48-59
+				
+				//- .col-auto.text-right.d-none.d-sm-block
+				//- 	+e.small: a(href="tel:8 (383) 304-85-99") 8 (383) 304-85-99
+				//- 	+e.tel(href="tel:8 (800) 350-48-59") 8 (800) 350-48-59
+				.col-auto.d-none.d-md-block
+					+e.A.btn.popup-with-move-anim(href="#modal-call"  data-title="Заказать звонок" data-sub-title="Заполните форму, и мы свяжемся с Вами в течение 15 минут для уточнения деталей" data-btn="Заказать звонок") Заказать звонок
+			
+			//- +e.bot Листайте вниз
+	// end top-nav

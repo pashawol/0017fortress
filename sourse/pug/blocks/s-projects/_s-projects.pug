@@ -1,0 +1,51 @@
+mixin s-projects()
+	// start s-projects
+	+b.s-projects.section#s-projects&attributes(attributes)
+		+b.section-title.section
+			.container
+				.row
+					.col
+						h2 Выполненные объекты
+					.col-auto.d-md-flex.d-none
+						+arrow()
+		+e.slider--js.swiper-container
+			.swiper-wrapper
+				mixin slide(i ,pr ,t , c , gr , p , t1 , p1 , t2 , p2)
+					+e.slide.swiper-slide.section( data-background=`img/project-${i}.jpg` class="swiper-lazy")
+						.container
+							.row.no-gutters
+								.col
+									+e.block--caption
+										+e.head
+											.row
+												.col
+													+e.prim= pr
+													+e.title= t
+													+e.city= c
+													+e.gray= gr
+												.col-auto.d-sm-flex.d-none
+													+b.count-block
+														+e.current
+														+e.total
+										+e.text= p
+										+e.img-wrap.bgs.d-md-none( data-background=`img/project-${i}.jpg` class="swiper-lazy")
+										.row.justify-content-md-start.justify-content-sm-center
+											+e.col.col-auto
+												+e.title-sm= t1
+												+e.p= p1
+											
+											+e.col.col-auto
+												+e.title-sm= t2
+												+e.p= p2
+										+e.btn.popup-with-move-anim.d-md-block.d-none(href="#modal-call" data-order=`Получить расчет` data-title="Получить расчет" data-sub-title="Заполните форму, и мы свяжемся с Вами в течение 15 минут для уточнения деталей" data-btn="Получить расчет") Получить расчет
+								.col-5.align-self-end.d-none.d-md-block
+									+e.block--right
+										 
+										+e.count 250
+										+e.sm проектов спроектированы и&nbsp;реализованы в&nbsp;жизнь нашей компанией
+				//- +slide("","","","","","","","","","")
+				- for (var x = 0; x < 6; x++)
+					+slide("1","Торговый комплекс","MixMax","г. Красноярск, ","ул. Телевизорная 1, строение 9","Проектирование системы водяного пожаротушения.","16 000 м2","метраж выполненных работ","60 дней","срок выполненных работ")
+			.swiper-pagination.d-md-none
+		+e.btn.popup-with-move-anim.d-md-none(href="#modal-call" data-order=`Получить расчет` data-title="Получить расчет" data-sub-title="Заполните форму, и мы свяжемся с Вами в течение 15 минут для уточнения деталей" data-btn="Получить расчет") Получить расчет
+	// end s-projects

@@ -1,0 +1,19 @@
+include ../mixin-wrap/mixin-wrap.pug
+mixin footer()
+	+b.FOOTER.footer
+		.container
+			.row
+				.col-lg-5
+					 
+					+e.text
+						span.year-js 
+						| 
+						|  © ООО «Крепость Групп»
+				.col-lg-auto.order-lg-first
+					+e.link.tdn(href="#") Политика конфиденциальности
+				+e.logo-col.col
+					a(href="http://ad-heads.ru" target="_blank").d-inline-block
+						img.res-i.lazy(src="#" data-src="img/logo-foot.png", alt="")
+						+e.DIV.small.text-white.text-center Создание
+							br
+							| и продвижение

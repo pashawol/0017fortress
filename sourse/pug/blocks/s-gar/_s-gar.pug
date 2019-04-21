@@ -1,0 +1,29 @@
+
+mixin s-gar()
+	// start s-gar
+	+b.s-gar.section#s-gar.pb-0.lazy-background&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Гарантия прохождения  проверки МЧС
+		mixin item(i,t)
+			+e.item--md
+				.container
+					.row.align-items-center
+						+e.col.col-lg-auto.col-md-3
+							+e.img-wrap
+								img.res-i.lazy(src="#" data-src=`img/gar-${i}.png` width='220' height='160', alt="")
+						.col
+							+e.block--md
+								+e.title= t
+								block
+				// /+e.item
+		+item('1',' Согласуем')
+			+e.text Мы&nbsp;гарантируем, что все системы пожарной безопасности, установленные нашей компанией, пройдут проверку и&nbsp;согласование в&nbsp;МЧС, Минстрое России.
+		
+		+item('2','  Устраним замечания за свой счет')
+			+e.text Замечания инспектора МЧС устраним за&nbsp;свой счет в&nbsp;течение нескольких дней.
+		
+		+item('3',' Гарантируем')
+			+e.text Гарантия прописана в&nbsp;договоре и&nbsp;имеет юридическую силу.
+	// end s-gar
+

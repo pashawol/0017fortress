@@ -1,0 +1,22 @@
+mixin s-client()
+	// start s-client
+	+b.s-client.section#s-client.bg-light.d-none.d-md-block
+		.container
+			+b.section-title.text-center
+				h2 Наши клиенты
+				+e.text.text-primary Нам доверяют крупные компании
+			.sldier-wrap
+				+e.slider--js.swiper-container
+					.swiper-wrapper
+						- for (var x = 1; x < 9; x++)
+							+e.slide.swiper-slide
+								img.res-i.lazy(src="#" data-src=`img/logo-${x}.png`, alt="")
+							// /+e.slide.swiper-slide
+							
+						- for (var x = 1; x < 9; x++)
+							+e.slide.swiper-slide
+								img.res-i.lazy(src="#" data-src=`img/logo-${x}.png`, alt="")
+							// /+e.slide.swiper-slide
+				.swiper-pagination
+			+e.btn.popup-with-move-anim(href="#modal-call" data-order=`Присоединяйтесь` data-title="Оставить заявку" data-sub-title="Заполните форму, и мы свяжемся с Вами в течение 15 минут для уточнения деталей" data-btn="Оставить заявку") Присоединяйтесь
+	// end s-client

@@ -1,0 +1,44 @@
+//- include ../mixin-wrap/mixin-wrap.pug
+//- include ../form-wrap/form-wrap.pug
+mixin modal() 
+ 
+	//- #modal-win.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modal-win', aria-hidden='true')
+		
+	//- 	div( class="   modal-dialog  modal-dialog-centered  " role='document') 
+	//- 		+form-wrap()(class=" modal-content modal-win ")
+	//- 			button.close.mfp-close(type='button', data-dismiss='modal', aria-label='Close')  ×
+	//- 			+input("tel","Введите ваш телефон")(name="tel" required) 
+				
+	//- 			+e.BUTTON.btn.btn.btn-accent.btn-block Отправить
+	//- 			+b.wrap-polite
+	//- 				+b.custom-input.polite
+	//- 					+b.LABEL.custom-input.polite
+	//- 						+e.INPUT.input.__input-radio(type="checkbox" checked name="polite" required value="")
+	//- 						+e.SPAN.lab
+	//- 						| Даю 
+	//- 						| 
+	//- 						span.link( data-toggle='modal', data-target='#exampleModal2') согласие 
+
+	//- 						| на хранение и обработку   персональных данных
+	
+ 
+
+
+
+	+form-wrap()(id="modal-call" class="zoom-anim-dialog mfp-hide modal-win modal-form" )
+		.text-center
+			+e.title--js 
+			+e.title-sub--js
+		+input("text","name","Введите имя")(required)
+		+input("tel","tel","Введите телефон")( required)
+			
+		+e.INPUT.btn(type="submit" value=" ")
+		//- +polite
+	// #modal-call
+	 
+ 
+	 
+	+b.form-wrap(id="thanks" class="zoom-anim-dialog mfp-hide modal-win modal-form text-center" )
+		+e.title спасибо за обращение!
+		+e.title-sub Мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время для уточнения деталей
+	// modal

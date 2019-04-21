@@ -1,0 +1,38 @@
+mixin header-block()
+	// start header-block
+	+b.header-block#header-block
+		+e.slider--js.swiper-container
+			.swiper-wrapper
+				- for (var x = 0; x < 3; x++)
+					+e.slide.swiper-slide.bgs(style="background-image: url(img/head-bg.jpg);")
+					// /+e.slide.swiper-slide
+		+e.inner
+			.container
+				h1 Проектно-монтажные работы любой сложности точно в&nbsp;срок
+				.row
+					.col-xl-5.col-md-4.col-12
+						
+						+e.btn.popup-with-move-anim(href="#modal-call"  data-title="Заказать расчет" data-sub-title="Заполните форму, и мы свяжемся с Вами в течение 15 минут для уточнения деталей" data-btn="Заказать расчет") Заказать расчет
+					.col-auto.d-md-block.d-none
+						+e.item
+							+e.count 7
+							+e.text лет успешной 
+								br
+								| работы
+					
+					.col-auto.d-md-block.d-none
+						+e.item
+							+e.count 250
+							+e.text выполненных
+								br
+								| объектов
+					
+					.col-auto.d-md-block.d-none
+						+e.item
+							+e.count 45
+							+e.text специалистов
+								br
+								| в штате
+	.swiper-pagination
+				
+	// end header-block

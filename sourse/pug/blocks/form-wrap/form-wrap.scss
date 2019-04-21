@@ -1,0 +1,210 @@
+.form-wrap{
+ 	&__input-wrap{
+
+ 		// max-width: 466px;
+ 	}
+ 	&__input{
+		//  outline: 0 !important;
+		text-align: center;
+		 resize: none;
+		 @include mt;
+		 @extend .form-control-lg;
+		 &:focus{
+			 border: 2px solid $primary;
+			 outline: none;
+		 }
+ 	}
+ 	&__btn{
+ 		cursor: pointer;
+ 	}
+ 	label{
+ 		width: 100%;
+ 		display: block;
+	 }
+	 
+	 &__inner{
+		 
+		 background-position: left center ;
+		 background-repeat: no-repeat; 
+		 margin-top: em(35);
+		 @include media-breakpoint-up(sm) {
+
+			 padding: 25px 68px;
+			}
+			padding: 35px 15px 20px;
+	 }
+	 &__inner-title{
+		 @extend .mono; 
+		 text-align: center;
+		 @include media-breakpoint-up(xl) {
+
+			 font-size: 36px;
+			}
+			// font-size: 32px;
+			font-size: calc(.8rem + 1.5vw);
+			margin-bottom: em(8);
+	 }
+	 &__btn{
+		 @extend .btn;
+		 @extend .btn-block;
+		 @extend .btn-primary;
+		 @extend .btn-lg;
+	 }
+	 &__small{
+		font-size: 12px; 
+		text-align: center;
+		margin-top: em(20);
+	}
+
+	&__title{
+		font-size: 36px;
+		@extend .mono;
+		line-height: 1;
+		margin-bottom: em(5);
+
+	}
+	&__title-sub{
+		// color: $gray; 
+		font-size: $h6-font-size;
+		margin-bottom: em(30);
+	}
+}
+
+
+.parsley-error{
+	border-image: none;
+	border: 2px solid  red !important;
+	color: red;
+	outline: 0 !important;
+	 
+}
+.parsley-success{
+	border: 2px solid  #00d600 !important;
+
+}
+.parsley-errors-list{
+	color: red;
+}
+
+// 
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(xs) {}
+
+// 
+@include media-breakpoint-between(md, xl) {}
+
+// 
+@include media-breakpoint-only(xs) {}
+
+@include media-breakpoint-only(sm) {}
+
+@include media-breakpoint-only(md) {}
+
+@include media-breakpoint-only(lg) {}
+
+@include media-breakpoint-only(xl) {}
+
+// 
+@include media-breakpoint-down(xl) {}
+
+@include media-breakpoint-down(lg) {}
+
+@include media-breakpoint-down(md) {}
+
+@include media-breakpoint-down(sm) {}
+
+@include media-breakpoint-down(xs) {}
+
+
+.border-primary{
+	border-color: $primary;
+}
+
+
+
+.custom-input{
+	display: block;
+	margin: auto;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: rem(900px);
+	margin-top: rem(15);
+	@include media-breakpoint-up(md) {
+		text-align: left;
+		padding-left: 35px;
+	}
+	text-align: center;
+	margin-bottom: rem(20);
+	cursor: pointer;
+	position: relative;
+	display: inline-block;
+	font-size: rem(16);
+	&__input{
+		position: absolute;
+		// opacity: 0;
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		border: 0;
+		padding: 0;
+		clip: rect(0 0 0 0 );
+		overflow: hidden;
+	}
+	&__lab{
+		@include media-breakpoint-up(md) {
+
+			left: 0;
+			display: block;
+			top: rem(-1px);
+			// display: inline-block;
+			width: rem(24px);
+			height: rem(24px);
+			background-color: #ffffff;
+			@include mt;
+			position: absolute; 
+			margin-right: 10px;
+			
+		}
+	}
+	@include media-breakpoint-up(md) {
+
+		&__input[type="checkbox"] + &__lab{
+			&::after{ 
+				content:   url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='SVGDoc' width='14' height='9' xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink'   viewBox='0 0 14 9'%3E%3Cdefs%3E%3C/defs%3E%3Cdesc%3EGenerated with Avocode.%3C/desc%3E%3Cg%3E%3Cg%3E%3Ctitle%3EФигура 7%3C/title%3E%3Cpath d='M0.29289,3.70658l1.41415,-1.41391l3.87206,3.87155l6.76236,-5.91755l1.31699,1.50538l-7.99999,7.00006l-1.1253,-1.28584l-0.24032,0.24035z' fill='%23ff8e4a' fill-opacity='1'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+				position: absolute;
+				@include a-cent; 
+				opacity: 0;
+			}
+		}
+	}
+		&__input[type="radio"] + &__lab{
+			
+			border-radius: 50%;
+		&::after{ 
+			content: '';
+			position: absolute;
+			@include a-cent;
+			background-color: $success;
+			opacity: 0;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+		}
+	}
+ 
+	&__input:checked + &__lab{ 
+		&::after{
+
+			opacity: 1;
+		}
+	}
+
+}
+

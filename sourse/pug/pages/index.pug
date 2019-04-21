@@ -1,0 +1,34 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-gar/_s-gar.pug
+include ../blocks/s-client/_s-client.pug
+include ../blocks/s-servises/_s-servises.pug
+include ../blocks/s-cards/_s-cards.pug
+include ../blocks/s-advantages/_s-advantages.pug
+include ../blocks/s-projects/_s-projects.pug 
+include ../blocks/s-docs/_s-docs.pug
+
+block title
+	title title
+
+block pagecontent
+	//- +mob-mnu()
+	+header()
+		//- +top-line()
+		+top-nav()
+
+		+header-block()
+	+s-servises
+	+s-cards
+	+s-advantages
+	+s-projects
+	+s-gar()
+	+s-form()
+	+s-docs()
+	+s-client()
+	+s-contact()
+		+footer()
+

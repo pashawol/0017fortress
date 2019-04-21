@@ -1,0 +1,19 @@
+mixin s-form()
+	// start s-form
+	+b.s-form.section#s-form&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2.text-white Бесплатная консультация
+				+e.text.text-primary Закажите консультацию с&nbsp;квалифицированным специалистом. Это бесплатно!
+			+form-wrap
+				.row
+					.col-lg
+						+input("text","name","Введите имя")(required)
+					.col-lg
+						+input("tel","tel","Введите телефон")( required)
+						
+					.col-lg
+						+e.INPUT.btn(type="submit" value="Получить консультацию")
+			.p.text-center.text-white  или позвоните нам по телефону: 
+				a.strong.text-white.d-inline-block(href="tel:8(800)350-48-59") 8 (800) 350-48-59
+	// end s-form

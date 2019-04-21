@@ -1,0 +1,126 @@
+.modal-win {
+	display: block;
+	position: relative;
+	background-color: #ffffff;
+	max-width: 550px;
+	margin-left: auto;
+	margin-right: auto;
+	ul{
+		list-style-type: none;
+		margin-bottom: 0;
+		margin-top: 10px;
+		text-align: left;
+	}
+	li{
+		position: relative;
+		padding-left: 20px;
+		margin-bottom: em(10);
+
+		max-width: 410px;
+		line-height: 1.4;
+		&::before{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: em(8);
+			width: 5px;
+			height: 5px;
+			background-color: $danger;
+			border-radius: 50%;
+		}
+	}
+	input{
+		text-align: center;
+	}
+	// text-align: center;
+	@include media-breakpoint-up(sm) {
+
+		padding: rem(80px) rem(60px) rem(70px);
+	}
+	padding: rem(80px) rem(20px) rem(70px);
+	.modal-content {
+		// max-width: 485px;
+		// padding-right: 40px 15px;
+	}
+	.mfp-close {
+		width: 70px;
+		height: 70px; 
+		right: 0;
+		top: 0;
+		text-align: center;
+		color: transparent !important;
+		font-size: 40px;
+		opacity: 1;
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAAAuklEQVRIS72VwRGDMAwETx2lFEoglQQqCSWklHR0jJkkA45lCSzwi4e9K98YSUi+AAwi8kbQInlbmJ+PJOgiBBteKjZKkHPkm0SroHT+B2+5gVbYBn5EULvxH3yPwIqyCPcILHBiqPCawAM24SWBF+yCZ4IHgNH7w1VjWXcDkj2AJ4C7iEyeTuGCr6IYUs8IqzzPOCxzDeQVXP/OvZVZ+67rLVYl2vMzu+JRcG0eLLG0gjXBuTP0zOk/A57J1MwZZ2VNAAAAAElFTkSuQmCC);
+		background-position: center center;
+		background-repeat: no-repeat;
+		@include mt;
+		@extend .btn-primary;
+	}   
+}
+
+a {
+	outline: 0 !important;
+}
+ 
+.politic{
+	text-align: center;
+}
+.polite {
+	text-align: center;
+	.link {
+		color: $primary;
+		cursor: pointer;
+		text-decoration: underline;
+		:hover {
+			display: none;
+		}
+	}
+}
+#thanks{
+	padding-bottom: rem(40px);
+}
+
+// 
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(xs) {}
+
+// 
+@include media-breakpoint-between(md, xl) {}
+
+// 
+@include media-breakpoint-only(xs) {}
+
+@include media-breakpoint-only(sm) {}
+
+@include media-breakpoint-only(md) {}
+
+@include media-breakpoint-only(lg) {}
+
+@include media-breakpoint-only(xl) {}
+
+// 
+@include media-breakpoint-down(xl) {}
+
+@include media-breakpoint-down(lg) {}
+
+@include media-breakpoint-down(md) {}
+
+@include media-breakpoint-down(sm) {}
+
+@include media-breakpoint-down(xs) {}
+
+
+.politic{
+	font-size: 1em;
+	font-size: 12px;
+	// color: $gray;
+	margin-top: em(20);
+}
