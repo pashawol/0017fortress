@@ -2,7 +2,7 @@
 		&.visible{
 		
 		}
-		@include media-breakpoint-up(md) {
+		// @include media-breakpoint-up(md) {
 
 			.section-title{
 				margin-left: auto;
@@ -27,7 +27,7 @@
 
 				// margin-bottom: rem(80px);
 			}
-		}
+		// }
 		&__btn{
 			@include btn;
 			@extend .btn-block;

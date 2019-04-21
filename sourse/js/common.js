@@ -230,14 +230,14 @@ jQuery(document).ready(function ($) {
 
 
 	// листалка по стр
-	// $(" .top-nav a").click(function () {
-	//        var elementClick = $(this).attr("href");
-	//        var destination = $(elementClick).offset().top;
+	$(" .top-nav a").click(function () {
+	       var elementClick = $(this).attr("href");
+	       var destination = $(elementClick).offset().top;
 
-	//            $('html, body').animate({ scrollTop: destination }, 1100);
+	           $('html, body').animate({ scrollTop: destination }, 1100);
 
-	//        return false;
-	//    });
+	       return false;
+	   });
 
 
 
