@@ -135,8 +135,14 @@
 	&__slide:hover &__item{ 
 			transform: translateY(0); 
 	}
+	&__link{
+		display: block;
+		color: #ffffff !important;
+		text-decoration: none !important;
+	}
 	&__item{
 		position: absolute;
+	
 		width: 100%;
 		@extend .h6;
 		margin-bottom: 0;

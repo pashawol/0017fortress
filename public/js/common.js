@@ -136,7 +136,7 @@ var JSCCommon = {
 
 	inputMask: function () {
 		// mask for input
-		$('input[type="tel"]').attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+7(999)999-99-99");
+		$('input[type="tel"]').attr("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+9(999)999-99-99");
 	}
 
 };
@@ -230,7 +230,7 @@ jQuery(document).ready(function ($) {
 
 
 	// листалка по стр
-	$(" .top-nav a").click(function () {
+	$(" .top-nav__link").click(function () {
 	       var elementClick = $(this).attr("href");
 	       var destination = $(elementClick).offset().top;
 

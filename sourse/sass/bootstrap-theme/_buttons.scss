@@ -73,6 +73,13 @@ fieldset:disabled a.btn {
   }
 }
 
+.btn-primary{
+  color: $body-color !important;
+  &:hover{
+    background-color: #f8833c; 
+    border-color: #f8833c; 
+  }
+}
 
 //
 // Link buttons

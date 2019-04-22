@@ -6,7 +6,11 @@ mixin header-block()
 				- for (var x = 0; x < 3; x++)
 					+e.slide.swiper-slide.bgs(style="background-image: url(img/head-bg.jpg);")
 					// /+e.slide.swiper-slide
-		+e.inner
+		+e.inner 
+			+e.bot
+				+e.before
+					+icon('arrrow-foot')
+				+e.bot-text Листайте вниз
 			.container
 				h1 Проектно-монтажные работы любой сложности точно в&nbsp;срок
 				.row

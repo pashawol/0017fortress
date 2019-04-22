@@ -87,6 +87,54 @@
 		z-index: -1;
 
 	}
+
+
+	&__bot{
+		position: absolute;
+		@media (min-width: 1260px) {
+			display: block;
+		}
+		display: none;
+		@include media-breakpoint-up(xl) {
+			left: rem(-53px);
+		}
+		left: rem(15px);
+		bottom: rem(60);
+		@extend .h6;
+		color: #ffffff;
+		// transform-origin: 20% 40%;
+		cursor: pointer;
+		padding-left: rem(15px);
+		&__text{
+
+		}
+		&:hover{
+			.header-block__before{
+				
+				// @include transform(translateX(-10%) );
+				top: rem(10);
+			}
+		}
+	}
+	&__bot-text{
+		position: relative;
+		@include transform(translate(0, -400%) rotate(-90deg));
+	}
+	&__before{
+		// content: url(../img/mouse.png);
+		// @include transform( rotate(90deg));
+		margin-right: 10px;
+		position: absolute;
+		top: rem(0);
+		display: inline;
+		left: rem(82);
+		@include mt;
+		.icon{
+			color: #ffffff;
+			font-size: rem(62);
+		}
+	}
+	
 	// 
 	@include media-breakpoint-up(xl) {}
 
