@@ -433,10 +433,10 @@ jQuery(document).ready(function ($) {
 
 	$('.popup-with-move-anim').click(function () {
 		var th = $(this);
-		if ($(this).is(".s-rates__btn")) {
+		if ($(this).is(".tabs__link")) {
 
-			$(th.attr('href')).find(".form-wrap__title--js").html(th.data('title') + '  <div class="text-primary2">' + th.data('type'));
-			$(th.attr('href')).find(".order").val(th.data('title') + ' ' + th.data('type'));
+			 
+			$(th.attr('href')).find(".order").val(th.data('order'));
 		} else if ($(this).is(".s-why__btn")) {
 			$(th.attr('href')).find(".form-wrap__title--js").html(th.data('title'));
 			$(th.attr('href')).find(".order").val(th.data('btn') + ' ' + th.parent().find('.s-why__title').text());
@@ -472,6 +472,7 @@ jQuery(document).ready(function ($) {
 				th.trigger("reset");
 				// $.magnificPopup.close();
 			}, 4000);
+			ym(53383120, 'reachGoal', 'zakaz');
 		});
 		return false;
 	});
