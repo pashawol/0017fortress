@@ -255,9 +255,9 @@ jQuery(document).ready(function ($) {
 			spaceBetween: 0,
 			watchOverflow: true,
 			touchStartForcePreventDefault: true,
-			// autoplay: {
-			// 	delay: 3000,
-			// },
+			autoplay: {
+				delay: 3000,
+			},
 
 			pagination: {
 				el: $(this).find('.swiper-pagination'),
@@ -451,6 +451,9 @@ jQuery(document).ready(function ($) {
 		$(th.attr('href')).find(".form-wrap__btn").val(th.data('btn'));
 		$(th.attr('href')).find(".btn-name").text(th.data('btn'));
 	})
+
+
+
 	// form
 	$("form").submit(function () { //Change
 		var th = $(this);
