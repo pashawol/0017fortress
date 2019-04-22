@@ -37,10 +37,16 @@
 		padding-bottom: em(5);
 	}
 	&__item{
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(xxl) {
 
 			margin-left: rem(45);
 		}
+		
+		@include media-breakpoint-up(lg) {
+
+			margin-left: rem(15);
+		}
+
 		padding-left: rem(15);
 		// margin-right: 20px;
 		// padding-right: rem(5);
