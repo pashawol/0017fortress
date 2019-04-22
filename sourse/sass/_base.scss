@@ -113,12 +113,13 @@ body {
 
 body,
 html {
-	@include media-breakpoint-up(xl) {
+	@media (min-width: 1440px) {
 
 		font-size: $em-base;
 	}
+
 	
-	@include media-breakpoint-up(md) {
+	@include media-breakpoint-up(lg) {
 
 		font-size: 18px;
 	}

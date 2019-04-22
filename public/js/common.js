@@ -512,7 +512,29 @@ jQuery(document).ready(function ($) {
 
 	// });
 	// });
+	
+	// листалка по стр
+	$(" .top-nav__link").click(function () {
+		var elementClick = $(this).attr("href");
+		var destination = $(elementClick).offset().top;
 
+				$('html, body').animate({ scrollTop: destination }, 1100);
+
+		return false;
+});
+
+
+
+$(".header-block__bot").click(function(){
+	
+	var elementClick = $(".s-servises");
+	var destination = $(elementClick).offset().top;
+	
+	$('html, body').animate({ scrollTop: destination }, 1100);
+	
+	return false;
+});
+	
 	var date = new Date();
 	$('.year-js ').text(date.getFullYear());
 });

@@ -91,15 +91,20 @@
 
 	&__bot{
 		position: absolute;
+		// width: rem(26);
 		@media (min-width: 1260px) {
 			display: block;
 		}
 		display: none;
-		@include media-breakpoint-up(xl) {
-			left: rem(-53px);
+		@media (min-width: 1830px) {
+			left: rem(-23px);
 		}
-		left: rem(15px);
-		bottom: rem(60);
+		@include media-breakpoint-up(xl) {
+
+			// left: rem(15px);
+		}
+		left: rem(-60);
+		bottom: rem(95);
 		@extend .h6;
 		color: #ffffff;
 		// transform-origin: 20% 40%;
