@@ -22,7 +22,7 @@ $mail->setFrom('info@info.com');
 
 
 //Субъект
-$mail->Subject = 'Заявка с сайта лицензирование24.рф/медицина';
+$mail->Subject = 'Заявка с сайта КрепостьГрупп';
 
 $time = date('d.m.Y в H:i');
 $html = '
