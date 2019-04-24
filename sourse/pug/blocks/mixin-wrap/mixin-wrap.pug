@@ -65,7 +65,7 @@ mixin soc()
 //- 			li.menu-item: a(href="#")= linkName
 
 mixin mnu()
-	- var nav= {"О нас":"#s-servises","Лицензии":"#s-cards","Преимущества":"#s-advantages","Кейсы":"#s-projects","Наши клиенты":"#s-client","Контакты":"#s-contact"}
+	- var nav= {"Виды работ":"#s-servises","Ваши выгоды":"#s-cards","Объекты":"#s-projects","Гарантии":"#s-gar","Документы":"#s-docs","Контакты":"#s-contact"}
 	+e.UL.nav
 		each linkPatch, linkName in nav
 			+e.LI.item: +e.A.link(href= linkPatch)= linkName

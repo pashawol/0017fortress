@@ -247,7 +247,7 @@ jQuery(document).ready(function ($) {
 
 	// slider
 	$('.header').each(function () {
-
+		var a = window.location.hash;
 		var swiper4 = new Swiper($(this).find('.header-block__slider--js'), {
 			// slidesPerView: 5,
 			slidesPerView: 1,
@@ -255,19 +255,24 @@ jQuery(document).ready(function ($) {
 			spaceBetween: 0,
 			watchOverflow: true,
 			touchStartForcePreventDefault: true,
-			autoplay: {
-				delay: 3000,
-			},
+			// autoplay: {
+			// 	delay: 3000,
+			// },
 
 			pagination: {
 				el: $(this).find('.swiper-pagination'),
 				clickable: true,
 			},
 
+			hashNavigation: {
+        watchState: true,
+			},
+			 
+
 		});
 	})
 	$('.section').each(function () {
-
+		
 		var swiper5 = new Swiper($(this).find('.s-client__slider--js'), {
 			// slidesPerView: 5,
 			slidesPerView: 4,
@@ -275,6 +280,7 @@ jQuery(document).ready(function ($) {
 			slidesPerColumn: 2, 
 			watchOverflow: true,
 			spaceBetween: 30,
+			
 			navigation: {
 				nextEl: $(this).find('.swiper-button-next'),
 				prevEl: $(this).find('.swiper-button-prev'),
@@ -299,8 +305,12 @@ jQuery(document).ready(function ($) {
 					slidesPerView: 3,
 					spaceBetween: 30
 				}
-			}
+			},
+		
 		});
+		
+		// swiper5.slideTo(a, 0, false);
+
 	});
 
 
@@ -433,15 +443,21 @@ jQuery(document).ready(function ($) {
 
 	$('.popup-with-move-anim').click(function () {
 		var th = $(this);
-		if ($(this).is(".tabs__link")) {
+		if (th.is(".tabs__link")) {
 
 			 
 			$(th.attr('href')).find(".order").val(th.data('order'));
-		} else if ($(this).is(".s-why__btn")) {
+		} else if (th.is(".s-why__btn")) {
 			$(th.attr('href')).find(".form-wrap__title--js").html(th.data('title'));
 			$(th.attr('href')).find(".order").val(th.data('btn') + ' ' + th.parent().find('.s-why__title').text());
 
-		} else {
+		}
+		else if(th.is('.header-block__btn')){
+			
+			$(th.attr('href')).find(".order")
+			.val(th.data('btn')+"  " + th.parents(".header-block__inner").find(".h1").text());
+		} 
+		else {
 			$(th.attr('href')).find(".form-wrap__title--js").html(th.data('title'));
 			$(th.attr('href')).find(".order").val(th.data('btn'));
 
@@ -541,4 +557,8 @@ $(".header-block__bot").click(function(){
 	
 	var date = new Date();
 	$('.year-js ').text(date.getFullYear());
+
+
+
+ 
 });

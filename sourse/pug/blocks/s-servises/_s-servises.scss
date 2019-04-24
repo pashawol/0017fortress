@@ -11,14 +11,18 @@
 			transform: translate3d(0px, 0px, 0px) !important;  
 		}
 	}
-	@include media-breakpoint-up(sm) {
-
-		.swiper-wrapper{
+	
+	.swiper-wrapper{
+		@include media-breakpoint-up(sm) {
 			margin-left: -15px;
 			margin-right: -15px;
 			width: calc(100% + 30px);
-			
 		}
+						@include media-breakpoint-up(lg) {
+
+							justify-content: center;
+						}
+			
 	}
 		@include media-breakpoint-up(md) {
 		.swiper-pagination-bullet:last-child{

@@ -42,15 +42,28 @@ mixin s-servises()
 						+e.content&attributes(attributes)
 							+e.slider--js.swiper-container
 								.swiper-wrapper
-									
-									+tab-slide('1','Пожарная безопасность')
-									+tab-slide('2','Охранопожарная сигнализация')
-									+tab-slide('3','Оповещение людей о пожаре')
-									+tab-slide('4','Пожаротушение')
+									block
 								.swiper-pagination
 					+cont()(class="active")
+						+tab-slide('1','Пожарная безопасность')
+						+tab-slide('2','Охранопожарная сигнализация')
+						+tab-slide('3','Оповещение людей о пожаре')
+						+tab-slide('4','Пожаротушение')
 					+cont() 
+						+tab-slide('2-1','Водоснабжение')
+						+tab-slide('2-2','Отопление')
+						+tab-slide('2-3','Водоотведение') 
 					+cont() 
+						+tab-slide('3-1','Вентиляция')
+						+tab-slide('3-2','Кондиционирование')
+						+tab-slide('3-3','Дымоудаление') 
 					+cont() 
+						+tab-slide('4-1','Электросети')
+						+tab-slide('4-2','Освещение')
+						+tab-slide('4-3','Электрические подстанции')
 					+cont() 
+						+tab-slide('5-1','Слаботочные системы')
+						+tab-slide('5-2','Контроль доступа')
+						+tab-slide('5-3','Видеонаблюдение')
+						+tab-slide('5-4','Системы связи')
 	// end s-servises
