@@ -2,10 +2,10 @@ mixin s-advantages()
 	// start s-advantages
 	+b.s-advantages.section#s-advantages&attributes(attributes)
 		.container
-			+b.section-title.text-center
+			+b.section-title.text-center(class="wow fadeInUp" data-wow-duration="0.8s")
 				h2 Сотрудничая с нами Вы получаете:
 				
-			.row
+			.row(class="wow fadeInUp" data-wow-duration="0.8s")
 				mixin item(i)
 					+e.col.col-lg-4.col-sm-6
 						+e.img-wrap
@@ -49,5 +49,5 @@ mixin s-advantages()
 							| объемы  
 							| 
 						| работ
-			+e.btn.popup-with-move-anim(href="#modal-call" data-order=` ` data-title="Оставить заявку" data-sub-title="Заполните форму, и мы свяжемся с Вами в течение 15 минут для уточнения деталей" data-btn="Оставить заявку") Оставить заявку
+			+e.btn.popup-with-move-anim(href="#modal-call" data-order=` ` data-title="Оставить заявку" data-sub-title="Заполните форму, и мы свяжемся с Вами в течение 15 минут для уточнения деталей" data-btn="Оставить заявку"  class="wow fadeInUp" data-wow-duration="0.8s") Оставить заявку
 	// end s-advantages

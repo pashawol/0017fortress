@@ -314,19 +314,61 @@ jQuery(document).ready(function ($) {
 	});
 
 
+	// function tabSlider(){
+		function tabscostume(tab) {
+			var params = {
+				// init: false
+				slidesPerView: 4,
+				spaceBetween: 30, 
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+				breakpoints: {
+					// when window width is <= 320px
+					440: {
+						slidesPerView: 1,
+					},
+					// when window width is <= 480px
+					767: {
+						slidesPerView: 2,
+					},
+					// when window width is <= 640px
+					991: {
+						slidesPerView: 3,
+					}
+				},
+			}
+			var mySwiper = new Swiper($(".tabs__content.active").find('.tabs__slider--js'), params);
 
-	var mySwiper = new Swiper('.tabs__slider--js', {
-		// slidesPerView: 5,
-		// init: false,
-		slidesPerView: 'auto',
-		// spaceBetween: 30,
-		watchOverflow: true,
-		pagination: {
-			el: '.swiper-pagination',
-			clickable: true,
-		},
+			$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
+				$(this)
+					.addClass('active').siblings().removeClass('active')
+					.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
+					.eq($(this).index()).addClass('active').fadeIn(function () {
+						var slider = $(this).find('.tabs__slider--js');
+						if(slider.hasClass("swiper-container-initialized")){ 
+							mySwiper.update();
+						}
+						else{ 
+							mySwiper = new Swiper(slider, params);
+						}
+					});
+				// swiper6.destroy();
+			});
+			
+		// }
+		// mySwiper.on('init', function() { /* do something */ });
+		// // mySwiper.slideNext();
+		// mySwiper.init();
+		}
 
-	});
+		tabscostume('tabs');
+	
+
+	
+
+
 
 	$('.s-cards').each(function () {
 		var swiper5 = new Swiper($(this).find('.s-cards__slider--js'), {
@@ -403,40 +445,7 @@ jQuery(document).ready(function ($) {
 		});
 	});
 
-	function tabscostume(tab) {
-
-		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-			$(this)
-				.addClass('active').siblings().removeClass('active')
-				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-				.eq($(this).index()).fadeIn(function () {
-					var mySwiper = new Swiper($(this).find('.tabs__slider--js'), {
-						// slidesPerView: 5,
-						// init: false,
-						slidesPerView: 'auto',
-						watchOverflow: true,
-						spaceBetween: 0,
-						watchOverflow: true,
-						// centeredSlides: true,
-						// loop: true,
-						// loopFillGroupWithBlank: true,
-						// touchRatio: 0.2,
-						// slideToClickedSlide: true, 
-
-						pagination: {
-							el: '.swiper-pagination',
-							clickable: true,
-						},
-
-					});
-				}).addClass('active');
-			// swiper6.destroy();
-
-		});
-	}
-
-
-	tabscostume('tabs');
+	
 	// mySwiper.init()
 
 	// modal window
@@ -448,21 +457,22 @@ jQuery(document).ready(function ($) {
 			 
 			$(th.attr('href')).find(".order").val(th.data('order'));
 		} else if (th.is(".s-why__btn")) {
-			$(th.attr('href')).find(".form-wrap__title--js").html(th.data('title'));
+			// $(th.attr('href')).find(".form-wrap__title--js").html(th.data('title'));
 			$(th.attr('href')).find(".order").val(th.data('btn') + ' ' + th.parent().find('.s-why__title').text());
-
+			
 		}
 		else if(th.is('.header-block__btn')){
+			// $(th.attr('href')).find(".form-wrap__title--js").html(th.data('title'));
 			
 			$(th.attr('href')).find(".order")
 			.val(th.data('btn')+"  " + th.parents(".header-block__inner").find(".h1").text());
 		} 
 		else {
-			$(th.attr('href')).find(".form-wrap__title--js").html(th.data('title'));
 			$(th.attr('href')).find(".order").val(th.data('btn'));
-
+			
 		}
-
+		
+		$(th.attr('href')).find(".form-wrap__title--js").html(th.data('title'));
 		$(th.attr('href')).find(".form-wrap__title-sub--js").text('Заполните форму, и мы свяжемся с Вами в течение дня для уточнения деталей');
 		$(th.attr('href')).find(".form-wrap__btn").val(th.data('btn'));
 		$(th.attr('href')).find(".btn-name").text(th.data('btn'));
@@ -559,6 +569,7 @@ $(".header-block__bot").click(function(){
 	$('.year-js ').text(date.getFullYear());
 
 
-
+	var wow = new WOW({ mobile: false });
+	wow.init();
  
 });

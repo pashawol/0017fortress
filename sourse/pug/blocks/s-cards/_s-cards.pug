@@ -1,9 +1,9 @@
 mixin s-cards()
 	// start s-cards
 	+b.s-cards#s-cards&attributes(attributes)
-		+e.inner
+		+e.inner(class="wow fadeInUp" data-wow-duration="0.8s")
 			.container 
-				+e.slider--js.swiper-container
+				+e.slider--js.swiper-container(class="wow fadeInUp" data-wow-duration="0.8s")
 					.swiper-wrapper
 						mixin item(t, p)
 							+e.slide.swiper-slide.col-lg-4.col-sm-6

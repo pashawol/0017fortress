@@ -3,19 +3,19 @@ mixin s-docs()
 	+b.s-docs.section#s-docs&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 Разрешающие документы
-				+e.text.text-primary Допуски и&nbsp;лицензии
-			+e.slider--js.swiper-container
+				h2(class="wow fadeInUp" data-wow-duration="0.8s") Разрешающие документы
+				+e.text.text-primary(class="wow fadeInUp" data-wow-duration="0.8s") Допуски и&nbsp;лицензии
+			+e.slider--js.swiper-container(class="wow fadeInUp" data-wow-duration="0.8s")
 				.swiper-wrapper.gal
 					mixin sl(i)
 						+e.slide.swiper-slide
 							+e.img-wrap(href=`img/doc-${i}.jpg`)
-								img.res-i.lazy(src="#" data-src=`img/doc-${i}-s.jpg`, alt="")
+								img.res-i.lazy(src="#" data-src=`img/doc-${i}.jpg`, alt="")
 					+sl('1')
 					+sl('2')
 					+sl('3')
 					+sl('4')
 					//- +sl('1')
-		.swiper-pagination
+		.swiper-pagination(class="wow fadeInUp" data-wow-duration="0.8s")
 		
 	// end s-docs

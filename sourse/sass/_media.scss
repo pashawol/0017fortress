@@ -1,7 +1,11 @@
 
 /*==========  Mobile First  ==========*/
 @include media-breakpoint-up(xl) {}
-@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(lg) {
+	.wow:not(.animated){
+		visibility: hidden;
+	}
+}
 @include media-breakpoint-up(md) {}
 @include media-breakpoint-up(sm) {}
 @include media-breakpoint-up(xs) {}
@@ -20,7 +24,7 @@
 /* Small Devices, Tablets */
 @include media-breakpoint-down(md)
 	{
-				.animated{
+				.wow{
 				/*CSS transitions*/
 				-o-transition-property: none !important;
 				-moz-transition-property: none !important;

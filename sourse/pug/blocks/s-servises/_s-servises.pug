@@ -2,11 +2,11 @@ mixin s-servises()
 	// start s-servises
 	+b.s-servises.section#s-servises&attributes(attributes)
 		.container
-			+b.section-title.text-center
+			+b.section-title.text-center(class="wow fadeInUp" data-wow-duration="0.8s")
 				h2 Какие работы мы проводим
 				+e.text.text-primary Выберите интересующее направление
 			+b.tabs
-				+e.caption
+				+e.caption(class="wow fadeInUp" data-wow-duration="0.8s")
 					+e.btn.active
 						+icon('fire')
 						| Пожарная безопасность
@@ -40,7 +40,7 @@ mixin s-servises()
 						// /+e.slide.swiper-slide
 					mixin cont()
 						+e.content&attributes(attributes)
-							+e.slider--js.swiper-container
+							+e.slider--js.swiper-container(class="wow fadeInUp" data-wow-duration="0.8s")
 								.swiper-wrapper
 									block
 								.swiper-pagination

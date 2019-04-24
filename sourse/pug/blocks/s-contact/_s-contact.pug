@@ -1,9 +1,9 @@
 mixin s-contact()
 	// start s-contact
-	+b.s-contact#s-contact&attributes(attributes)
+	+b.s-contact#s-contact(class="wow fadeInUp" data-wow-duration="0.8s")&attributes(attributes)
 		.container
 			.row
-				.col-lg-6
+				.col-lg-6(class="wow fadeInUp" data-wow-duration="0.8s")
 					.section
 						+e.title.text-primary Контактная информация
 						.h2.strong
@@ -17,7 +17,7 @@ mixin s-contact()
 						.h4 г. Красноярск, 
 						p ул. Свердловская, 3&nbsp;&laquo;Д&raquo;, офис 409
 						  
-				.col
+				.col(class="wow fadeInUp" data-wow-duration="0.8s")
 					script.
 						var map;
 						function initMap() {

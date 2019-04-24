@@ -10,7 +10,7 @@ mixin header-block()
 			.swiper-wrapper
 				mixin sl(i, id)
 					+e.slide.swiper-slide.bgs(style=`background-image: url(img/head-bg-${i}.jpg);` data-hash=`${id}`)
-						+e.inner 
+						+e.inner(class="wow fadeInUp" data-wow-duration="0.8s")
 							.container
 								block
 								
@@ -56,6 +56,6 @@ mixin header-block()
 				
 				+sl('6','video')
 					.h1 Установка систем контроля доступа и&nbsp;видеонаблюдения
-	.swiper-pagination
+	.swiper-pagination(class="wow fadeInUp" data-wow-duration="0.8s")
 				
 	// end header-block

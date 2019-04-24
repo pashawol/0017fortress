@@ -1,7 +1,7 @@
 mixin s-projects()
 	// start s-projects
 	+b.s-projects.section#s-projects&attributes(attributes)
-		+b.section-title.section
+		+b.section-title.section(class="wow fadeInUp" data-wow-duration="0.8s")
 			.container
 				.row
 					.col
@@ -13,7 +13,7 @@ mixin s-projects()
 				mixin slide(i ,pr ,t , c , gr , p , t1 , p1 , t2 , p2)
 					+e.slide.swiper-slide.section( data-background=`img/project-${i}.jpg` class="swiper-lazy")
 						.container
-							.row.no-gutters
+							.row.no-gutters(class="wow fadeInUp" data-wow-duration="0.8s")
 								.col
 									+e.block--caption
 										+e.head
